@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SimpleNotificationsModule } from 'angular2-notifications';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from "./home/home.component";
@@ -22,6 +24,8 @@ import { ContactService } from "./contact/contact.service";
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, 
+    SimpleNotificationsModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
     HttpModule,

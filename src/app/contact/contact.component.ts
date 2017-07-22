@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, AbstractControl, Validators, FormBuilder } from "@angular/forms";
 import { ContactService } from "./contact.service";
+import { NotificationsService } from "angular2-notifications";
 
 @Component({
   selector: 'app-contact',
@@ -13,8 +14,14 @@ export class ContactComponent implements OnInit {
   public email: AbstractControl;
   public phone: AbstractControl;
   public message: AbstractControl;
+  public options = {
+    position: ["top", "right"],
+    timeOut: 0,
+    lastOnBottom: true,
+  };
 
-  constructor(private fb: FormBuilder, private contactService: ContactService) { 
+  constructor(private fb: FormBuilder, private contactService: ContactService,
+              private notiService: NotificationsService) { 
     this.createContactForm();
     this.name = this.contactForm.controls['name'];
     this.email = this.contactForm.controls['email'];
@@ -36,14 +43,26 @@ export class ContactComponent implements OnInit {
 
   onSubmit(values) {
     this.contactService.saveContact(values).subscribe(res => {
-      console.log(res);
+      if (res.status === 200) {
+        this.notiService.success(
+            'Mensaje enviado correctamente',
+            'Gracias por comunicarse con nosotros',
+            {
+              timeOut: 6000,
+              showProgressBar: true,
+              pauseOnHover: false,
+              clickToClose: false,
+              maxLength: 100
+            }
+          );
+        this.contactForm.reset();
+      }
     }, error => {
       console.log('error');
       console.log(error);
-      /*
       this.notiService.error(
-        'No se pudo guardar la información',
-        'Por favor verifique que los datos ingresados son correctos',
+        'No se pudo enviar el mensaje',
+        'Por favor intentelo nuevamente',
         {
           timeOut: 6000,
           showProgressBar: true,
@@ -51,7 +70,7 @@ export class ContactComponent implements OnInit {
           clickToClose: false,
           maxLength: 100
         }
-      );*/
+      );
     });
   }
 
