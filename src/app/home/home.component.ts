@@ -7,24 +7,29 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @ViewChild('testElem') el:ElementRef;
+  live: boolean;
+  @ViewChild('testElem') el: ElementRef;
 
   constructor() { }
 
   ngOnInit() {
+    this.live = true;
   }
 
   ngAfterViewInit() {
- 
-      this.recursiveCarousel(5000);
-
-    
-    
+    this.recursiveCarousel(5000);
   }
+
+  ngOnDestroy() {
+    this.live = false;
+  }
+  
   recursiveCarousel(time){
     setTimeout(()=>{
-      this.el.nativeElement.click();
-      this.recursiveCarousel(time);
+      if (this.live) {
+        this.el.nativeElement.click();
+        this.recursiveCarousel(time);
+      }
     }, time);
   }
 
