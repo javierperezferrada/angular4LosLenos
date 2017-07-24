@@ -7,64 +7,13 @@
           </h2>
           <hr>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 text-center">
+      <div class="col-sm-6 col-md-4 col-lg-3 text-center" *ngFor="let section of sections">
           <img class="img-responsive img-border img-full" src="assets/img/slide-1.jpg" alt="">
-          <h2>Pichangas
+          <h2>{{ section.name }}
               <br>
-              <small>Para 1 persona</small><br>
-              <small>Para 2 personas</small><br>
-              <small>Para 3 personas</small><br>
-          </h2>
-          <hr>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 text-center">
-          <img class="img-responsive img-border img-full" src="assets/img/slide-2.jpg" alt="">
-          <h2>Pizzas
-              <br>
-              <small>Los Leños</small><br>
-              <small>Francesa</small><br>
-              <small>Napolitana</small><br>
-              <small>Vegetariana</small><br>
-          </h2>
-          <hr>
-      </div>
-      <div class="ccol-sm-6 col-md-4 col-lg-3 text-center">
-          <img class="img-responsive img-border img-full" src="assets/img/slide-3.jpg" alt="">
-          <h2>Platos
-              <br>
-              <small>Plato 1</small><br>
-              <small>Plato 2</small><br>
-              <small>Plato 3</small><br>
-              <small>Plato 4</small><br>
-              <small>Plato 5</small><br>
-              <small>Plato 6</small><br>
-              <small>Plato 7</small><br>
-              <small>Plato 8</small><br>
-              <small>Plato 9</small><br>
-          </h2>
-          <hr>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 text-center">
-          <img class="img-responsive img-border img-full" src="assets/img/slide-3.jpg" alt="">
-          <h2>Bebidas
-              <br>
-              <small>Coca Cola</small><br>
-              <small>Fanta</small><br>
-              <small>Sprite</small><br>
-              <small>Pepsi</small><br>
-              <small>Crush</small><br>
-              <small>Coca Cola</small><br>
-              
-          </h2>
-          <hr>
-      </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 text-center">
-          <img class="img-responsive img-border img-full" src="assets/img/slide-3.jpg" alt="">
-          <h2>Cervezas
-              <br>
-              <small>Kunstmann</small><br>
-              <small>Calle Calle</small><br>
-              <small>Bundor</small><br>
+              <div *ngFor="let product of section.products">
+                <small>{{ product.name }}</small><br>
+              </div>
           </h2>
           <hr>
       </div>
