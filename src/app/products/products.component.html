@@ -7,14 +7,26 @@
           </h2>
           <hr>
       </div>
-      <div class="col-sm-6 col-md-4 col-lg-3 text-center" *ngFor="let section of sections">
+      <div class="col-sm-12 col-md-6 col-lg-4 text-center" *ngFor="let section of sections">
           <img class="img-responsive img-border img-full" src="assets/img/slide-1.jpg" alt="">
           <h2>{{ section.name }}
               <br>
-              <div *ngFor="let product of section.products">
+              <div *ngFor="let product of section.principalProducts">
                 <small>{{ product.name }}</small><br>
               </div>
+              <div id="{{section.id}}" class="collapse">
+                  <div *ngFor="let product of section.otherProducts">
+                    <small>{{ product.name }}</small><br>
+                  </div>
+             
+              </div> 
           </h2>
+          
+          <button type="button"
+                  class="btn btn-warning"
+                  data-toggle="collapse"
+                  [attr.data-target]="'#' + section.id">Ver Todos</button>
+          
           <hr>
       </div>
   </div>
