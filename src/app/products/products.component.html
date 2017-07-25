@@ -25,7 +25,9 @@
           <button type="button"
                   class="btn btn-warning"
                   data-toggle="collapse"
-                  [attr.data-target]="'#' + section.id">Ver Todos</button>
+                  id="{{ section.id }}"
+                  [attr.data-target]="'#' + section.id"
+                  (click)="seeMore(section.id)" #sSection>Ver Todos</button>
           
           <hr>
       </div>
