@@ -12,7 +12,7 @@
           <h2>{{ section.name }}
               <br>
               <div *ngFor="let product of section.principalProducts">
-                <small>{{ product.name }}</small><br>
+                <small (click)="showDetail(product);">{{ product.name }}</small><br>
               </div>
               <div id="{{section.id}}" class="collapse">
                   <div *ngFor="let product of section.otherProducts">
