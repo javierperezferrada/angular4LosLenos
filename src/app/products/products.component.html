@@ -9,24 +9,33 @@
       </div>
       <div class="col-sm-12 col-md-6 col-lg-4 text-center" *ngFor="let section of sections">
           <img class="img-responsive img-border img-full" src="assets/img/slide-1.jpg" alt="">
+          
+
           <h2>{{ section.name }}
               <br>
-              <div *ngFor="let product of section.principalProducts">
-                <small (click)="showDetail(product);">{{ product.name }}</small><br>
+              <div class="list-group">
+              
+                <a (click)="showDetail(product, section);"  
+                    class="list-group-item list-group-item-action" 
+                    *ngFor="let product of section.principalProducts"><small>{{ product.name }}</small></a>
+             
+                <div id="{{section.id}}" class="collapse">
+                  <a (click)="showDetail(product, section);"  
+                      class="list-group-item list-group-item-action" 
+                      *ngFor="let product of section.otherProducts"><small>{{ product.name }}</small></a>
+                </div> 
               </div>
-              <div id="{{section.id}}" class="collapse">
-                  <div *ngFor="let product of section.otherProducts">
-                    <small (click)="showDetail(product);">{{ product.name }}</small><br>
-                  </div>
-              </div> 
           </h2>
+          
           
           <button type="button"
                   class="btn btn-warning"
                   data-toggle="collapse"
                   id="{{ section.id }}"
                   [attr.data-target]="'#' + section.id"
-                  (click)="seeMore(section.id)" #sSection>Ver Todos</button>
+                  (click)="seeMore(section.id)" 
+                  *ngIf="section.otherProducts.length >= 1"
+                  #sSection>Ver Todos</button>
           
           <hr>
       </div>

@@ -22,8 +22,8 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.sections = this._service.getSections();
     this.sections.forEach(element => {
-      element.principalProducts = element.products.slice(0,3);
-      element.otherProducts = element.products.slice(3,);
+      element.principalProducts = element.products.slice(0,5);
+      element.otherProducts = element.products.slice(5,);
     });
   }
 
@@ -49,10 +49,11 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  showDetail(product) {
+  showDetail(product, section) {
     const activeModal = this.modalService.open(DetailModal, {size: 'lg'});
     activeModal.componentInstance.modalHeader = product.name;
     activeModal.componentInstance.data = product;
+    activeModal.componentInstance.section = section;
     activeModal.result.then(
       function onClose(result){
         if (result !== 'cancel') {

@@ -1,12 +1,10 @@
 <div class="modal-content">
   <div class="modal-header">
 
-    <h4 class="modal-title">{{modalHeader}}</h4>
+    <h4 class="modal-title"><small>{{ section.name }}</small> - {{modalHeader}}</h4>
     <button class="close align-rigth" aria-label="Close" (click)="cancelModal()">
       X
     </button>
-    
-    
   </div>
   <div class="modal-body">
     <img [attr.src]="'assets/img/products/' + data.img + '.jpg'" class="img-responsive img-border img-full" alt="">

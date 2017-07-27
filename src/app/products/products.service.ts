@@ -22,7 +22,6 @@ export class ProductsService {
                           {id:2, name:'pichangas', products: [{id:10, name: 'para 1 persona', img: 'product'},
                                                              {id:11, name: 'para 2 personas', img: 'product'},
                                                              {id:12, name: 'para 3 personas', img: 'product'},
-                                                             {id:12, name: 'para 4 personas', img: 'product'},
                                                             ]},
                           {id:3, name:'pizzas', products: [{id: 13, name: 'los leños', img: 'product'},
                                                            {id: 14, name: 'cazadora', img: 'product'},
