@@ -2,7 +2,14 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class ProductsService {
-  public sections: Array<any> = [{id:1, name:'sandwichs', products: [{id: 1, name: 'los leños', img: 'product'},
+  public sections: Array<any> = [{id:1, name:'sandwichs', products: [{id: 1, name: 'los leños', img: 'product', ingredients: [{name: 'Carne', brand: 'Pacel'},
+                                                                                                                              {name:'Mozzarela'},
+                                                                                                                              {name:'Tocino'},
+                                                                                                                              {name:'Champiñones'},
+                                                                                                                              {name:'Tomate'},
+                                                                                                                              {name:'Lechuga'},
+                                                                                                                              {name:'Pepinillos'},
+                                                                                                                              ]},
                                                               {id: 2, name: 'campesino', img: 'product'},
                                                               {id: 3, name: 'chacarero', img: 'product'},
                                                               {id: 4, name: 'universitario', img: 'product'},
