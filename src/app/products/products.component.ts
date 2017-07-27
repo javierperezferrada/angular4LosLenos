@@ -52,6 +52,7 @@ export class ProductsComponent implements OnInit {
   showDetail(product) {
     const activeModal = this.modalService.open(DetailModal, {size: 'lg'});
     activeModal.componentInstance.modalHeader = product.name;
+    activeModal.componentInstance.data = product;
     activeModal.result.then(
       function onClose(result){
         if (result !== 'cancel') {

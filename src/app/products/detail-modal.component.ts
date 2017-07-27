@@ -14,6 +14,7 @@ export class DetailModal implements OnInit {
   public amountForm: FormGroup;
   public amount: AbstractControl;
   modalHeader: string;
+  data: any;
 
   constructor(private activeModal: NgbActiveModal,
               private fb: FormBuilder) {

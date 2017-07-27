@@ -16,9 +16,8 @@
               </div>
               <div id="{{section.id}}" class="collapse">
                   <div *ngFor="let product of section.otherProducts">
-                    <small>{{ product.name }}</small><br>
+                    <small (click)="showDetail(product);">{{ product.name }}</small><br>
                   </div>
-             
               </div> 
           </h2>
           

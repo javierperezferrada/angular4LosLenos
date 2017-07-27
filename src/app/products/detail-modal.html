@@ -1,12 +1,14 @@
 <div class="modal-content">
   <div class="modal-header">
-    <h4 class="modal-title">{{modalHeader}}</h4>
     <button class="close align-rigth" aria-label="Close" (click)="cancelModal()">
       X
     </button>
+    <h4 class="modal-title">{{modalHeader}}</h4>
+    
   </div>
   <div class="modal-body">
-    
+    <img [attr.src]="'assets/img/products/' + data.img + '.jpg'" class="img-responsive img-border img-full" alt="">
+    <p>{{ data|json }}</p>
     
     <!--
     <form [formGroup]="amountForm" (ngSubmit)="onSubmit(amountForm.value)" novalidate>
