@@ -61,7 +61,7 @@ export class ProductsService {
                                                           ]},
                           {id:6, name:'platos extras', products: [{id: 2, name: 'costilla de cerdo asado con pure chileno', img: 'product'},
                                                                   {id: 3, name: 'filete los leños', img: 'product'},
-                                                                  {id: 4, name: 'lomo e entrecot los leños'}], img: 'product'},
+                                                                  {id: 4, name: 'lomo o entrecot los leños'}], img: 'product'},
                           {id:7, name:'agregados', products: [{id: 1, name: 'puré chileno', img: 'product'},
                                                               {id: 2, name: 'puré picante', img: 'product'},
                                                               {id: 2, name: 'papas duquesas', img: 'product'},

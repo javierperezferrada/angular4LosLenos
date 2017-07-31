@@ -3,33 +3,30 @@
 <div class="address-bar">Chacabuco 454 | Valdivia</div>
 
 <!-- Navigation -->
-<nav class="navbar navbar-default" role="navigation">
+<nav id="mainNav" class="navbar navbar-toggleable-md navbar-light bg-faded navbar navbar-default navbar-fixed-top navbar-custom">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+        <div class="navbar-header page-scroll">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
             <a class="navbar-brand" routerLink="">Los Leños</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav">
-                <li [routerLinkActive]="['active']">
-                    <a routerLink="inicio">Inicio</a>
+                <li [routerLinkActive]="['active']" class="nav-item">
+                    <a  class="nav-link" routerLink="inicio">Inicio</a>
                 </li>
-                <li [routerLinkActive]="['active']">
-                    <a routerLink="nosotros">Nosotros</a>
+                <li [routerLinkActive]="['active']" class="nav-item">
+                    <a  class="nav-link" routerLink="nosotros">Nosotros</a>
                 </li>
-                <li [routerLinkActive]="['active']">
-                    <a routerLink="productos">Productos</a>
+                <li [routerLinkActive]="['active']" class="nav-item">
+                    <a  class="nav-link" routerLink="productos">Productos</a>
                 </li>
-                <li [routerLinkActive]="['active']">
-                    <a routerLink="contacto">Contacto</a>
+                <li [routerLinkActive]="['active']" class="nav-item">
+                    <a  class="nav-link" routerLink="contacto">Contacto</a>
                 </li>
             </ul>
         </div>
