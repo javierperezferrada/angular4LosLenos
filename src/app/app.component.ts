@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  innerWidth: any;
+  @ViewChild('buttonNavbar') buttonNavbar: any;
+
+  closeNav() {
+    this.innerWidth = window.screen.width;
+    if (this.innerWidth < 770) {
+      this.buttonNavbar.nativeElement.click();
+    }
+  }
 }

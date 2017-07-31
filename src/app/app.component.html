@@ -7,7 +7,14 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                    #buttonNavbar>
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
@@ -17,16 +24,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="nav navbar-nav">
                 <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="inicio">Inicio</a>
+                    <a  class="nav-link" routerLink="inicio" (click)="closeNav()">Inicio</a>
                 </li>
                 <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="nosotros">Nosotros</a>
+                    <a  class="nav-link" routerLink="nosotros" (click)="closeNav()">Nosotros</a>
                 </li>
                 <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="productos">Productos</a>
+                    <a  class="nav-link" routerLink="productos" (click)="closeNav()">Productos</a>
                 </li>
                 <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="contacto">Contacto</a>
+                    <a  class="nav-link" routerLink="contacto" (click)="closeNav()">Contacto</a>
                 </li>
             </ul>
         </div>
