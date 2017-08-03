@@ -25,8 +25,9 @@ h6 {
     letter-spacing: 1px;
 }
 
+
 p {
-    font-size: 1.25em;
+    font-size: 2em;
     line-height: 1.6;
     color: #000;
 }
@@ -69,6 +70,7 @@ hr {
 .brand-name {
     margin: 0;
     font-size: 4em;
+    color: #d65151;
 }
 
 .tagline-divider {
@@ -80,8 +82,8 @@ hr {
 .box {
     margin-bottom: 20px;
     padding: 30px 15px;
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: #e6e6e6;
+    border-radius: 5px;
 }
 
 .intro-text {
@@ -100,6 +102,10 @@ hr {
 .img-left {
     float: none;
     margin: 0 auto 0;
+}
+
+.message {
+    
 }
 
 footer {

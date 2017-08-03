@@ -1,36 +1,4 @@
 <simple-notifications [options]="options"></simple-notifications>
-<div class="row">
-  <div class="box">
-    <div class="col-lg-12">
-      <hr>
-      <h2 class="intro-text text-center">Contacto
-          <strong>Los Leños</strong>
-      </h2>
-      <hr>
-    </div>
-    <div class="col-md-8">
-      <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-      <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=-39.8128913,-73.2426353&amp;spn=-39.8128913,-73.2426353&amp;t=m&amp;z=17&amp;output=embed"></iframe>
-    </div>
-    <div class="col-md-4">
-      <p>Horario de atención:<br>
-          <strong>Todos los dias </strong><br>
-          <strong>11:00 a 2:00</strong>
-      </p>
-      <p>Telefono:<br>
-          <strong>63 223 1003 </strong>
-      </p>
-      <p>Email:<br>
-          <strong><a href="mailto:contacto@losleñosvaldivia.cl">contacto@losleñosvaldivia.cl</a></strong>
-      </p>
-      <p>Dirección:<br>
-          <strong>Chacabuco 454
-              <br>Valdivia, Región de los Rios</strong>
-      </p>
-    </div>
-    <div class="clearfix"></div>
-  </div>
-</div>
 
 <div class="row">
   <div class="box">
@@ -44,21 +12,30 @@
               <div class="row">
                   <div class="form-group col-lg-4" [ngClass]="{'has-error': (!name.valid && name.touched), 'has-success': (name.valid && name.touched)}">
                       <label>Nombre</label>
-                      <input type="text" class="form-control" formControlName="name">
+                      <input type="text" 
+                                class="form-control"
+                                formControlName="name"
+                                placeholder="Ingrese su nombre">
                       <small class="alert-danger" *ngIf="(name.errors && name.touched)">
                         Debe ingresar su nombre.
                         </small>
                   </div>
                   <div class="form-group col-lg-4" [ngClass]="{'has-error': (!email.valid && email.touched), 'has-success': (email.valid && email.touched)}">
                       <label>Email</label>
-                      <input type="email" class="form-control" formControlName="email">
+                      <input type="email"
+                                class="form-control"
+                                formControlName="email"
+                                placeholder="email@correo.com">
                       <small class="alert-danger" *ngIf="(email.errors && email.touched)">
                         Debe ingresar su email.
                         </small>
                   </div>
                   <div class="form-group col-lg-4" [ngClass]="{'has-error': (!phone.valid && phone.touched), 'has-success': (phone.valid && phone.touched)}">
                       <label>Teléfono</label>
-                      <input type="tel" class="form-control" formControlName="phone">
+                      <input type="tel"
+                                class="form-control"
+                                formControlName="phone"
+                                placeholder="9 dígitos">
                       <small class="alert-danger" *ngIf="(phone.errors && phone.touched)">
                         Debe ingresar su teléfono con 9 dígitos.
                         </small>
@@ -66,7 +43,10 @@
                   <div class="clearfix"></div>
                   <div class="form-group col-lg-12" [ngClass]="{'has-error': (!message.valid && message.touched), 'has-success': (message.valid && message.touched)}">
                       <label>Mensaje</label>
-                      <textarea class="form-control" rows="6" formControlName="message"></textarea>
+                      <textarea class="form-control"
+                                rows="6"
+                                formControlName="message"
+                                placeholder="Escribanos su mensaje"></textarea>
                       <small class="alert-danger" *ngIf="(message.errors && message.touched)">
                         Debe ingresar un mensaje con mas de 10 letras.
                         </small>
@@ -78,5 +58,39 @@
               </div>
           </form>
       </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="box">
+    <div class="col-lg-12">
+      <hr>
+      <h2 class="intro-text text-center">Contacto
+          <strong>Los Leños</strong>
+      </h2>
+      <hr>
+    </div>
+    
+    <div class="col-md-4">
+      <p>Dirección:<br>
+          <strong>Chacabuco 454
+              <br>Valdivia</strong>
+      </p>
+      <p>Horario de atención:<br>
+          <strong>Todos los dias </strong><br>
+          <strong>11:00 a 2:00</strong>
+      </p>
+      <p>Telefono:<br>
+          <strong>63 223 1003 </strong>
+      </p>
+      <p>Email:<br>
+          <strong><a href="mailto:contacto@losleñosvaldivia.cl">contacto@losleñosvaldivia.cl</a></strong>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
+      <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=-39.8128913,-73.2426353&amp;spn=-39.8128913,-73.2426353&amp;t=m&amp;z=17&amp;output=embed"></iframe>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </div>

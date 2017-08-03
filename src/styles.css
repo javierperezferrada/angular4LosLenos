@@ -4,3 +4,7 @@
 .navbar-light .navbar-toggler {
     position: relative;
 }
+
+.navbar-nav {
+    font-size: 2em;
+}

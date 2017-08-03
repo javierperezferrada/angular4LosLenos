@@ -2,7 +2,10 @@
     opacity:1;
 }
 
-
+.productsSection .list-group{
+  max-height:470px;
+  overflow-y: scroll;
+}
 
 @media (min-width: 768px)  {
   .productsSection {

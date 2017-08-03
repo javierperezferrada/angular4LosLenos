@@ -22,7 +22,9 @@
                 <div id="{{section.id}}" class="collapse">
                   <a (click)="showDetail(product, section);"  
                       class="list-group-item list-group-item-action" 
-                      *ngFor="let product of section.otherProducts"><small>{{ product.name }}</small></a>
+                      *ngFor="let product of section.otherProducts"><small>{{ product.name }}</small>
+                  </a>
+
                 </div> 
               </div>
           </h2>
