@@ -8,3 +8,20 @@
 .navbar-nav {
     font-size: 2em;
 }
+
+.nav>li>a {
+    padding: 15px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+
+    background-color: #1fd0c8;
+}
+
+.h3, h3 {
+    font-size: 3em;
+}
+
+.carousel-caption {
+    color: #e44646;;
+}
