@@ -14,7 +14,7 @@ export const router: Routes = [
   { path: 'productos', component: ProductsComponent },
   { path: 'productos/detalle', component: ProductDetailComponent },
   { path: 'contacto', component: ContactComponent },
-  // { path: '**', redirectTo: 'inicio' },
+  { path: '**', redirectTo: 'inicio' },
 ];
 
 export const routes: ModuleWithProviders = RouterModule.forRoot(router, { useHash: true });

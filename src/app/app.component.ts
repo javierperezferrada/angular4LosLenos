@@ -12,7 +12,7 @@ export class AppComponent {
 
   closeNav() {
     this.innerWidth = window.screen.width;
-    if (this.innerWidth < 770) {
+    if (this.innerWidth < 768) {
       this.buttonNavbar.nativeElement.click();
     }
   }
