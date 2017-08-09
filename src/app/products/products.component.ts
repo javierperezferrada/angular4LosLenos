@@ -2,6 +2,7 @@ import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { ProductsService } from "./products.service";
 import { DetailModal } from "./detail-modal.component";
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-products',
@@ -17,7 +18,8 @@ export class ProductsComponent implements OnInit {
   public sections: Array<any>;
 
   constructor(private _service: ProductsService,
-              private modalService: NgbModal) { }
+              private modalService: NgbModal,
+              private router: Router) { }
 
   ngOnInit() {
     this.sections = this._service.getSections();
@@ -50,6 +52,8 @@ export class ProductsComponent implements OnInit {
   }
 
   showDetail(product, section) {
+    //this.router.navigateByUrl('/productos/detalle');
+    // Detalle de producto mostrado en una Modal
     const activeModal = this.modalService.open(DetailModal, {size: 'lg'});
     activeModal.componentInstance.modalHeader = product.name;
     activeModal.componentInstance.data = product;

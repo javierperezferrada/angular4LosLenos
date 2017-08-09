@@ -15,6 +15,8 @@ import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { routes } from "./app.router";
 import { ContactService } from "./contact/contact.service";
 import { DetailModal } from "./products/detail-modal.component";
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { AppFooterComponent } from './app-footer/app-footer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DetailModal } from "./products/detail-modal.component";
     ProductsComponent,
     AboutComponent,
     ContactComponent,
-    DetailModal
+    DetailModal,
+    ProductDetailComponent,
+    AppFooterComponent
   ],
   imports: [
     BrowserModule,

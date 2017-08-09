@@ -6,7 +6,8 @@ import { NgbActiveModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'detail-modal',
-  templateUrl: './detail-modal.html'
+  templateUrl: './detail-modal.html',
+  styleUrls:['../product-detail/product-detail.component.css']
 })
 
 export class DetailModal implements OnInit {
