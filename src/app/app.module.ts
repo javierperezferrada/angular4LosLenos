@@ -20,6 +20,7 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
 import { MapComponent } from './map/map.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { FacebookModule } from 'ngx-facebook';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AgmCoreModule } from '@agm/core';
     routes,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBvy8uj4GfJi_E3zkdVAZ6x4iHivDIHvIg'
-    })
+    }),
+    FacebookModule.forRoot()
   ],
   entryComponents: [
     DetailModal
