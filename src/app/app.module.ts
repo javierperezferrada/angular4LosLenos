@@ -17,6 +17,9 @@ import { ContactService } from "./contact/contact.service";
 import { DetailModal } from "./products/detail-modal.component";
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { AppFooterComponent } from './app-footer/app-footer.component';
+import { MapComponent } from './map/map.component';
+
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
     ContactComponent,
     DetailModal,
     ProductDetailComponent,
-    AppFooterComponent
+    AppFooterComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,10 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    routes
+    routes,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBvy8uj4GfJi_E3zkdVAZ6x4iHivDIHvIg'
+    })
   ],
   entryComponents: [
     DetailModal
@@ -46,3 +53,5 @@ import { AppFooterComponent } from './app-footer/app-footer.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+  

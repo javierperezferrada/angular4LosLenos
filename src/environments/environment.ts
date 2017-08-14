@@ -6,3 +6,5 @@
 export const environment = {
   production: false
 };
+
+export const carrouselTime: number = 5000;

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    this.recursiveCarousel(3000);
+    this.recursiveCarousel(10000);
   }
 
   ngOnDestroy() {

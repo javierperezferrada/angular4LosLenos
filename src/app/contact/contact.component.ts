@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, AbstractControl, Validators, FormBuilder } from "@angular/forms";
 import { ContactService } from "./contact.service";
 import { NotificationsService } from "angular2-notifications";
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css', '../app-footer/app-footer.component.css']
 })
 export class ContactComponent implements OnInit {
   public contactForm: FormGroup;
@@ -21,7 +22,8 @@ export class ContactComponent implements OnInit {
   };
 
   constructor(private fb: FormBuilder, private contactService: ContactService,
-              private notiService: NotificationsService) { 
+              private notiService: NotificationsService,
+              private modalService: NgbModal) { 
     this.createContactForm();
     this.name = this.contactForm.controls['name'];
     this.email = this.contactForm.controls['email'];
@@ -71,6 +73,12 @@ export class ContactComponent implements OnInit {
           maxLength: 100
         }
       );
+    });
+  }
+
+  open(content) {
+    this.modalService.open(content).result.then((result) => {
+    }, (reason) => {
     });
   }
 

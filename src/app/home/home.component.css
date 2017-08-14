@@ -1,0 +1,22 @@
+.carousel-caption {
+    color: #fff;
+    font-size: 1em;
+}
+
+.carousel-caption p{
+    color: #fff;
+}
+
+@media (min-width: 768px)  {
+  .carousel-caption {
+      font-size: 3em;
+  }
+}
+
+.carousel-control .icon-next, .carousel-control .icon-prev {
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    color: white;
+    font-size: 100px;
+}

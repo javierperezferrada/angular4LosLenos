@@ -13,7 +13,7 @@ export const router: Routes = [
   { path: 'nosotros', component: AboutComponent },
   { path: 'productos', component: ProductsComponent },
   { path: 'productos/detalle', component: ProductDetailComponent },
-  { path: 'contacto', component: ContactComponent },
+  { path: 'ubicacion', component: ContactComponent },
   { path: '**', redirectTo: 'inicio' },
 ];
 
