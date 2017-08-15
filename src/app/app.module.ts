@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimpleNotificationsModule } from 'angular2-notifications';
+import {GoTopButtonModule} from 'ng2-go-top-button';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from "./home/home.component";
@@ -46,13 +47,15 @@ import { FacebookModule } from 'ngx-facebook';
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBvy8uj4GfJi_E3zkdVAZ6x4iHivDIHvIg'
     }),
-    FacebookModule.forRoot()
+    FacebookModule.forRoot(),
+    GoTopButtonModule
   ],
   entryComponents: [
     DetailModal
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, ContactService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [GoTopButtonModule]
 })
 export class AppModule { }
 
