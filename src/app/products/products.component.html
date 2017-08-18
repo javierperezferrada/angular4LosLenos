@@ -1,6 +1,7 @@
-<div class="container">
+<div class="container-fluid">
+  <div class="box">
   <div class="row">
-    <div class="box">
+    
       <div class="col-md-12">
         <hr>
         <h3 class="intro-text text-center">Nuestros principales
@@ -34,8 +35,7 @@
       </div>
       <fb-like href="http://www.losleñosvaldivia.cl/#/productos"></fb-like>
     </div>
-  </div>
-  <go-top-button [html]="'<i class=\'fa fa-arrow-up\'></i>'"
+  <go-top-button [html]="'<i class=\'fa fa-2x fa-chevron-up\'></i>'"
                  [animate]="true"
                  [speed]="50"
                  [acceleration]="2"
@@ -43,9 +43,18 @@
                  [styles]="{
                     'border-radius': '20px 20px 20px 20px',
                     'right': '5px',
-                    'color': 'green',
+                    'top':'76%',
+                    'bottom': '24%',
+                    'color': '#f0ad4e',
+                    'background': 'rgba(0,0,0,0.1)',
                     'border': '5px solid',
-                    'line-height': '20px'
+                    'line-height': '20px',
+                    'margin-right': '20px',
+                    'z-index': '9999',
+                    'width': '50px',
+                    'height': '50px',
+                    'border-radius': '50%'
                  }">
   </go-top-button>
+  </div>
 </div>

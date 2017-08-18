@@ -5,3 +5,7 @@
 .input-group-addon {
     width: 30px;
 }
+
+.fa .fa-2x {
+    color: white; 
+}

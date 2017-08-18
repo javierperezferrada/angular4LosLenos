@@ -1,53 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
-
-.navbar-nav {
-    font-size: 1.5em;
-}
-
-.navbar-nav .nav-link {
-    padding-right: 10px;
-    padding-left: 10px;
-}
-.nav>li>a {
-    padding: 15px;
-}
-
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-
-    background-color: #e7e7e7;
-    margin-right: 10px;
-}
-
 .h3, h3 {
     font-size: 2em;
 }
 
-
-
-.navbar-light .navbar-brand, .navbar-light .navbar-toggler {
-    color: rgba(0,0,0,.9);
-    margin-top: 7px;
-    height: 25px;
-
-    margin-right: 20px;
-}
-
-.navbar-light .navbar-toggler {
-    background-color: #d6d4d3;
-
-}
-
-.nav-container {
-    padding-right: 6px !important;
-    margin-right: 0px;
-}
-
-.row{
-    margin-top: 10px;
-}
-.col{
-    margin-left: 5px;
-    margin-right: 5px;
+.white {
+    color:white;
 }

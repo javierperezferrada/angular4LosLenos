@@ -80,3 +80,8 @@ span.tags
     margin-left: -10px;
     z-index: 10;
     }
+
+
+.ingredient {
+  max-height: 30px;
+}

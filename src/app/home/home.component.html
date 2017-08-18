@@ -1,52 +1,53 @@
 <div class="row">
-<div class="container" style="max-heigth: 500px">
-  <div id="carousel-example-generic" class="carousel slide">
-    <!-- Indicators -->
-    <ol class="carousel-indicators hidden-xs">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
+  <div class="container-fluid">
+    <div id="carousel-example-generic" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <div class="carousel-caption d-none d-block">
-          <h3>¡Visitanos y sorprendete!</h3><p>Restaurant Los Leños<p>
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active" style="max-height:100vh">
+          <div class="carousel-caption d-none d-block">
+            <h3 class="text-warning font-weight-bold">Restaurant <span style="display: in-line">Los Leños</span></h3>
+            <h3>Visitanos y sorprendete</h3>
+          </div>
+          <img class="img-responsive img-full" src="assets/img/slide-1.jpg" alt="">
         </div>
-        <img class="img-responsive img-full" src="assets/img/slide-1.jpg" alt="">
-      </div>
-      <div class="item">
-        <img class="img-responsive img-full" src="assets/img/slide-3.jpg" alt="">
-        <div class="carousel-caption d-none d-block">
-          <h3>Comedores</h3><p>con ambiente temperado</p>
+        <div class="item" style="max-height:100vh">
+          <img class="img-responsive img-full" src="assets/img/slide-3.jpg" alt="">
+          <div class="carousel-caption d-none d-block">
+            <h3>Espaciosos Comedores</h3>
+            <p>Con un ambiente acogedor</p>
+          </div>
+        </div>
+        <div class="item" style="max-height:100vh">
+          <img class="img-responsive img-full" src="assets/img/slide-2.jpg" alt="">
+          <div class="carousel-caption d-none d-block">
+            <h3>2 niveles de terrazas</h3>
+            <p>con mesas al aire libre</p>
+          </div>
         </div>
       </div>
-      <div class="item">
-        <img class="img-responsive img-full" src="assets/img/slide-2.jpg" alt="">
-        <div class="carousel-caption d-none d-block">
-          <h3>Terrazas</h3><p>con mesas al aire libre</p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                   <span class="icon-prev"></span>
               </a>
-    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next" #testElem>
+      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next" #testElem>
                   <span class="icon-next"></span>
               </a>
-  </div>
-  <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </div>
 
-<div class="container"> 
-<div class="row">
+<div class="container mt-3">
+  <div class="row">
     <div class="col-sm-12 col-md-5 box">
-
-
       <hr>
       <h2 class="intro-text text-center">Ambiente
         <strong>Familiar</strong>
@@ -60,12 +61,9 @@
           <p>Disfrute de las mejores comidas junto a un grato ambiente familiar.</p>
         </div>
       </div>
-      
     </div>
     <div class="col-1"></div>
     <div class="col-sm-12 col-md-6 box">
-
-
       <hr>
       <h2 class="intro-text text-center">Usamos sólo las <strong>mejores</strong> marcas
       </h2>
@@ -79,21 +77,44 @@
         </div>
       </div>
     </div>
-</div>
-
-<div class="row">
-  <div class="box">
-    <div class="col-md-12">
-      <hr>
-      <h2 class="intro-text text-center">Un espacio
-        <strong>un encuentro</strong>
-      </h2>
-      <hr>
-      <p>En pleno centro de la bella Valdivia, a la espera de que vivas tus mejores momentos en torno a una mesa y a un servicio únicos.</p>
-      <p>Conoce nuestra variada  carta, junto a los tuyos. En todo momento, hazlo especial y ven a Los Leños Restaurant, y disfruta de lo mejor del sur.</p>
-
-      <fb-like href="http://www.losleñosvaldivia.cl/#/inicio"></fb-like>
+  </div>
+  <div class="row">
+    <div class="box">
+      <div class="col-md-12">
+        <hr>
+        <h2 class="intro-text text-center">Un espacio
+          <strong>un encuentro</strong>
+        </h2>
+        <hr>
+        <p>En pleno centro de la bella Valdivia, a la espera de que vivas tus mejores momentos en torno a una mesa y a un servicio
+          únicos.
+        </p>
+        <p>Conoce nuestra variada carta, junto a los tuyos. En todo momento, hazlo especial y ven a Los Leños Restaurant, y
+          disfruta de lo mejor del sur.</p>
+        <fb-like href="http://www.losleñosvaldivia.cl/#/inicio"></fb-like>
+      </div>
     </div>
   </div>
 </div>
-</div>
+
+  <go-top-button [html]="'<i class=\'fa fa-2x fa-chevron-up\'></i>'"
+                 [animate]="true"
+                 [speed]="50"
+                 [acceleration]="2"
+                 [scrollDistance]="300"
+                 [styles]="{
+                    'border-radius': '20px 20px 20px 20px',
+                    'right': '5px',
+                    'top':'76%',
+                    'bottom': '24%',
+                    'color': '#f0ad4e',
+                    'background': 'rgba(0,0,0,0.1)',
+                    'border': '5px solid',
+                    'line-height': '20px',
+                    'margin-right': '20px',
+                    'z-index': '9999',
+                    'width': '50px',
+                    'height': '50px',
+                    'border-radius': '50%'
+                 }">
+  </go-top-button>

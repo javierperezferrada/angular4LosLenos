@@ -181,39 +181,7 @@ export class ProductsService {
                                                                                                                               {name:'Agregado de cebolla'},
                                                                                                                               {name:'2 Huevos'},
                                                                                                                               {name:'Papas fritas'},
-                                                                                                                              ]},
-                                                           {id: 17, name: 'filete solo', img: 'product', ingredients: [{name:'Filete'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'lomo solo', img: 'product', ingredients: [{name:'Lomo'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'entrecot solo', img: 'product', ingredients: [{name:'Entrecot'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'escalopa kaiser sola', img: 'product', ingredients: [{name:'Escalopa Kaiser'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'asado vacuno solo', img: 'product', ingredients: [{name:'Asado de vacuno'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'bistec solo', img: 'product', ingredients: [{name:'Bistec'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'chuletas sola', img: 'product', ingredients: [{name:'Chuletas'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'pollo asado solo', img: 'product', ingredients: [{name:'Pollo asado'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'pollo a la plancha', img: 'product', ingredients: [{name:'Pollo a la plancha'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'salmón a la plancha', img: 'product', ingredients: [{name:'Salmón a la plancha'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'salmón milanés', img: 'product', ingredients: [{name:'salmón milanés'}
-                                                                                                                              ]},
-                                                           {id: 17, name: 'salsa leños', img: 'product', ingredients: [{name:'Tocino'},
-                                                                                                                              {name:'Champiñones'},
-                                                                                                                              {name:'Ciboulette'},
-                                                                                                                              ]},
-                                                           {id: 17, name: 'salsa de champiñones', img: 'product', ingredients: [{name:'Salsa de Champiñones'},
-                                                                                                                              ]},
-                                                           {id: 17, name: 'salsa de camarones', img: 'product', ingredients: [{name:'Salsa de Camarones'},
-                                                                                                                              ]},
-                                                           {id: 17, name: 'salsa a la pimienta', img: 'product', ingredients: [{name:'Salsa a la Pimienta'},
-                                                                                                                              ]},
+                                                                                                                              ]}
                                                           ]},
                           {id:6, name:'platos extras', products: [{id: 2, name: 'costilla de cerdo asado con pure chileno', img: 'product', ingredients: [{name:'Costillar de Cerdo'},
                                                                                                                               {name:'Puré Chileno'},
@@ -222,11 +190,44 @@ export class ProductsService {
                                                                                                                               {name:'Salsa de chamiñones, tocino, ciboulette'},
                                                                                                                               {name:'Papas duquesas'},
                                                                                                                               ]},
-                                                                  {id: 4, name: 'lomo o entrecot los leños'}], img: 'product', ingredients: [{name:'250 gr. de lomo liso o entrecot'},
+                                                                  {id: 4, name: 'lomo o entrecot los leños', img: 'product', ingredients: [{name:'250 gr. de lomo liso o entrecot'},
                                                                                                                               {name:'Salsa de chamiñones, tocino, ciboulette'},
                                                                                                                               {name:'Papas duquesas'},
                                                                                                                               ]},
-                          {id:7, name:'agregados', products: [{id: 1, name: 'puré chileno', img: 'product'},
+                                                                  {id: 17, name: 'filete solo', img: 'product', ingredients: [{name:'Filete'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'lomo solo', img: 'product', ingredients: [{name:'Lomo'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'entrecot solo', img: 'product', ingredients: [{name:'Entrecot'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'escalopa kaiser sola', img: 'product', ingredients: [{name:'Escalopa Kaiser'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'asado vacuno solo', img: 'product', ingredients: [{name:'Asado de vacuno'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'bistec solo', img: 'product', ingredients: [{name:'Bistec'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'chuletas sola', img: 'product', ingredients: [{name:'Chuletas'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'pollo asado solo', img: 'product', ingredients: [{name:'Pollo asado'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'pollo a la plancha', img: 'product', ingredients: [{name:'Pollo a la plancha'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'salmón a la plancha', img: 'product', ingredients: [{name:'Salmón a la plancha'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'salmón milanés', img: 'product', ingredients: [{name:'salmón milanés'}
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'salsa leños', img: 'product', ingredients: [{name:'Tocino'},
+                                                                                                                                      {name:'Champiñones'},
+                                                                                                                                      {name:'Ciboulette'},
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'salsa de champiñones', img: 'product', ingredients: [{name:'Salsa de Champiñones'},
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'salsa de camarones', img: 'product', ingredients: [{name:'Salsa de Camarones'},
+                                                                                                                                      ]},
+                                                                  {id: 17, name: 'salsa a la pimienta', img: 'product', ingredients: [{name:'Salsa a la Pimienta'},
+                                                                                                                                      ]}
+                          ]},
+                          {id:7, name:'Guarniciones', products: [{id: 1, name: 'puré chileno', img: 'product'},
                                                               {id: 2, name: 'puré picante', img: 'product'},
                                                               {id: 2, name: 'papas duquesas', img: 'product'},
                                                               {id: 2, name: 'papas fritas', img: 'product'},
@@ -293,7 +294,7 @@ export class ProductsService {
                                                                       {id:2,name: 'micheladas', img: 'product'},
                                                                       {id:2,name: 'corto jugo limón', img: 'product'},
                                                                     ]},
-                          {id:14, name:'tragos', products: [{id:1,name: 'mango sour', img: 'product'},
+                          {id:14, name:'cócteles', products: [{id:1,name: 'mango sour', img: 'product'},
                                                                       {id:2,name: 'jerez sour', img: 'product'},
                                                                       {id:2,name: 'pisco sour', img: 'product'},
                                                                       {id:2,name: 'amaretto sour', img: 'product'},
@@ -360,16 +361,15 @@ export class ProductsService {
                                                             {id:2,name: 'sandy macdonald', img: 'product'},
                                                             {id:2,name: 'white horse', img: 'product'},
                                                           ]},
-                          {id:16, name:'vinos', products: [{id:1,name: 'casa real 3/4', img: 'product'},
-                                                            {id:2,name: 'medalla real 3/4', img: 'product'},
-                                                            {id:2,name: '120 reserva especial 3/4', img: 'product'},
-                                                            {id:2,name: '120 3 medallas 3/4', img: 'product'},
-                                                            {id:2,name: 'savignon blanc 1/2', img: 'product'},
-                                                            {id:2,name: 'carmen margaux 3/4', img: 'product'},
-                                                            {id:2,name: 'casillero del diablo 3/4', img: 'product'},
-                                                            {id:2,name: 'santa emiliana 3/4', img: 'product'},
-                                                            {id:2,name: 'misiones de rengo 3/4', img: 'product'},
-                                                            {id:2,name: 'misiones de rengo personal', img: 'product'},
+                          {id:16, name:'vinos', products: [{id:1,name: 'casa real 750ml', img: 'product'},
+                                                            {id:2,name: 'medalla real 750ml', img: 'product'},
+                                                            {id:2,name: '120 reserva especial 750ml', img: 'product'},
+                                                            {id:2,name: '120 3 medallas 750ml', img: 'product'},
+                                                            {id:2,name: 'savignon blanc 375ml', img: 'product'},
+                                                            {id:2,name: 'carmen margaux 750ml', img: 'product'},
+                                                            {id:2,name: 'casillero del diablo 750ml', img: 'product'},
+                                                            {id:2,name: 'misiones de rengo 750ml', img: 'product'},
+                                                            {id:2,name: 'misiones de rengo personal 187ml', img: 'product'},
                                                           ]},
                         ]
 
