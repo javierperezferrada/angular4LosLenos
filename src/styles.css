@@ -8,3 +8,10 @@
 .white {
     color:white;
 }
+
+.flotante {
+    display:scroll;
+        position:fixed;
+        bottom:288px;
+        left:0px;
+}
