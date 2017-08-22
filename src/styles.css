@@ -10,8 +10,16 @@
 }
 
 .flotante {
+    z-index: 999;
     display:scroll;
         position:fixed;
-        bottom:288px;
+        top:108px;
         left:0px;
+}
+
+.like {
+    z-index: 999;
+    background-color: blue;
+    color: white;
+    border-color: white;
 }

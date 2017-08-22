@@ -1,4 +1,5 @@
-import { Component, ViewChild, HostListener } from '@angular/core';
+import { Component, ViewChild, HostListener, Inject } from '@angular/core';
+import { DOCUMENT } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -8,19 +9,19 @@ import { Component, ViewChild, HostListener } from '@angular/core';
 export class AppComponent {
   title = 'app';
   innerWidth: any;
-  scrollPage: boolean = false;
+  navIsFixed: boolean = false;
   @ViewChild('buttonNavbar') buttonNavbar: any;
+
+  constructor(@Inject(DOCUMENT) private document: Document) { }
+
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    this.scrollPage = true;
-  }
-
-  ngOnInit() {
-    this.scrollPage = false;
-  }
-
-  ngOnDestroy() {
-    this.scrollPage = false;
+    let number = this.document.body.scrollTop;
+    if (number > 56) {
+      this.navIsFixed = true;
+    } else if (this.navIsFixed && number < 10) {
+      this.navIsFixed = false;
+    }
   }
 
 

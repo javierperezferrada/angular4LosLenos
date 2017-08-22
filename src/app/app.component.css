@@ -1,0 +1,4 @@
+nav {
+    -webkit-transition: all 2s; /* Safari */
+    transition: all 2s;
+}
