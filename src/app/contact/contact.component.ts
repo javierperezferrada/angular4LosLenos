@@ -3,6 +3,7 @@ import { FormGroup, AbstractControl, Validators, FormBuilder } from "@angular/fo
 import { ContactService } from "./contact.service";
 import { NotificationsService } from "angular2-notifications";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { LocalStorageService } from "ng2-webstorage";
 
 @Component({
   selector: 'app-contact',
@@ -23,7 +24,8 @@ export class ContactComponent implements OnInit {
 
   constructor(private fb: FormBuilder, private contactService: ContactService,
               private notiService: NotificationsService,
-              private modalService: NgbModal) { 
+              private modalService: NgbModal, private storage:LocalStorageService) { 
+    this.storage.store('navIsFixed', true);
     this.createContactForm();
     this.name = this.contactForm.controls['name'];
     this.email = this.contactForm.controls['email'];

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from "ng2-webstorage";
 
 @Component({
   selector: 'app-about',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private storage:LocalStorageService) {
+    this.storage.store('navIsFixed', true);
+  }
 
   ngOnInit() {
   }

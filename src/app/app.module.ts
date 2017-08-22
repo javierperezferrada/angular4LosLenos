@@ -22,6 +22,7 @@ import { MapComponent } from './map/map.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { FacebookModule } from 'ngx-facebook';
+import {Ng2Webstorage} from 'ng2-webstorage';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { FacebookModule } from 'ngx-facebook';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule, 
+    BrowserAnimationsModule,
+    Ng2Webstorage,
     SimpleNotificationsModule.forRoot(),
     NgbModule.forRoot(),
     FormsModule,

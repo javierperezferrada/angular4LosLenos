@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-
+import {LocalStorageService} from 'ng2-webstorage';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +10,12 @@ export class HomeComponent implements OnInit {
   live: boolean;
   @ViewChild('testElem') el: ElementRef;
 
-  constructor() { }
+  constructor(private storage:LocalStorageService) {}
 
   ngOnInit() {
     this.live = true;
+    this.storage.store('inHome', true);
+    this.storage.store('navIsFixed', false);
   }
 
   ngAfterViewInit() {
@@ -22,6 +24,7 @@ export class HomeComponent implements OnInit {
 
   ngOnDestroy() {
     this.live = false;
+    this.storage.store('inHome', false);
   }
   
   recursiveCarousel(time){

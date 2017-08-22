@@ -1,6 +1,7 @@
 import { Component, ViewChild, HostListener, Inject } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/core';
 import { DOCUMENT } from "@angular/platform-browser";
+import {LocalStorageService, SessionStorageService} from 'ng2-webstorage';
 
 @Component({
   selector: 'app-root',
@@ -22,20 +23,38 @@ import { DOCUMENT } from "@angular/platform-browser";
   ],
 })
 export class AppComponent {
+  inHome: boolean = false;
   title = 'app';
   innerWidth: any;
   navIsFixed: boolean = false;
   @ViewChild('buttonNavbar') buttonNavbar: any;
 
-  constructor(@Inject(DOCUMENT) private document: Document) { }
+  constructor(@Inject(DOCUMENT) private document: Document,
+              private localSt:LocalStorageService) { }
+
+  ngOnInit () {
+    this.localSt.observe('inHome')
+      .subscribe((value) => {
+        this.inHome = value;
+      });
+    this.localSt.observe('navIsFixed')
+      .subscribe((value) => {
+        console.log(value);
+        this.navIsFixed = value;
+      });
+  }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    let number = this.document.body.scrollTop;
-    if (number > 56) {
+    if (this.inHome) {
+      let number = this.document.body.scrollTop;
+      if (number > 56) {
+        this.navIsFixed = true;
+      } else if (this.navIsFixed && number < 10) {
+        this.navIsFixed = false;
+      }
+    } else {
       this.navIsFixed = true;
-    } else if (this.navIsFixed && number < 10) {
-      this.navIsFixed = false;
     }
   }
 

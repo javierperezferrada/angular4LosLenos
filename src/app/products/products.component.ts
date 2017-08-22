@@ -3,6 +3,7 @@ import { ProductsService } from "./products.service";
 import { DetailModal } from "./detail-modal.component";
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
 import { Router } from "@angular/router";
+import { LocalStorageService } from "ng2-webstorage";
 
 @Component({
   selector: 'app-products',
@@ -19,7 +20,9 @@ export class ProductsComponent implements OnInit {
 
   constructor(private _service: ProductsService,
               private modalService: NgbModal,
-              private router: Router) { }
+              private router: Router, private storage:LocalStorageService) {
+                this.storage.store('navIsFixed', true);
+              }
 
   ngOnInit() {
     this.sections = this._service.getSections();
@@ -27,10 +30,6 @@ export class ProductsComponent implements OnInit {
       element.principalProducts = element.products.slice(0,5);
       element.otherProducts = element.products.slice(5,);
     });
-  }
-
-  ngAfterViewInit() {
-    
   }
 
   seeMore(id) {
