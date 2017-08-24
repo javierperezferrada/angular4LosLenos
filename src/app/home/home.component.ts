@@ -9,6 +9,7 @@ import {LocalStorageService} from 'ng2-webstorage';
 export class HomeComponent implements OnInit {
   live: boolean;
   @ViewChild('testElem') el: ElementRef;
+  loading: boolean = true;
 
   constructor(private storage:LocalStorageService) {}
 
@@ -18,8 +19,9 @@ export class HomeComponent implements OnInit {
     this.storage.store('navIsFixed', false);
   }
 
-  ngAfterViewInit() {
+  ngAfterContentInit() {
     this.recursiveCarousel(5000);
+    this.loading = false;
   }
 
   ngOnDestroy() {

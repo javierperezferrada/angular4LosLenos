@@ -23,6 +23,7 @@ import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { FacebookModule } from 'ngx-facebook';
 import {Ng2Webstorage} from 'ng2-webstorage';
+import { LoadingModule } from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {Ng2Webstorage} from 'ng2-webstorage';
       apiKey: 'AIzaSyBvy8uj4GfJi_E3zkdVAZ6x4iHivDIHvIg'
     }),
     FacebookModule.forRoot(),
-    GoTopButtonModule
+    GoTopButtonModule,
+    LoadingModule
   ],
   entryComponents: [
     DetailModal
