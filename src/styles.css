@@ -13,8 +13,11 @@
     z-index: 999;
     display:scroll;
         position:fixed;
-        top:108px;
-        left:0px;
+        top:128px;
+        left:20px;
+}
+.flotante a:hover{
+
 }
 
 .like {
@@ -22,4 +25,13 @@
     background-color: blue;
     color: white;
     border-color: white;
+}
+
+.extra-small {
+    font-size: 11px;
+}
+.close {
+    position: absolute;
+    top:21px;
+    right: 30px;
 }

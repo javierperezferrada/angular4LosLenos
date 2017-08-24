@@ -9,7 +9,7 @@
         </h3>
         <hr>
       </div>
-      <div class="col-sm-12 col-md-6 col-lg-4 text-center productsSection" *ngFor="let section of sections">
+      <div class="col-sm-12 col-md-6 col-lg-4 text-center productsSection pb-3" *ngFor="let section of sections">
         <img class="img-responsive img-border img-full" src="assets/img/slide-1.jpg" alt="">
 
 
@@ -26,10 +26,8 @@
             </div>
           </div>
         </h2>
-
-
-        <button type="button" class="btn btn-warning" data-toggle="collapse" id="{{ section.id }}" [attr.data-target]="'#' + section.id"
-          (click)="seeMore(section.id)" *ngIf="section.otherProducts.length >= 1" #sSection>Ver Todos</button>
+        <button type="button" class="btn btn-xs btn-default btn-with-icon float-right" data-toggle="collapse" id="{{ section.id }}" [attr.data-target]="'#' + section.id"
+          (click)="seeMore(section.id)" *ngIf="section.otherProducts.length >= 1" #sSection>ver más</button>
 
         <hr>
       </div>

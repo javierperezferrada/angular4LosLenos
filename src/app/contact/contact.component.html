@@ -31,7 +31,7 @@
           <!-- row start -->
           <div class="row py-2">
             <div class="col-3">
-              <a class="bg-circle bg-info" href="tel:632231003">
+              <a class="bg-circle bg-info" (click)="open(callConfirmation)">
                 <i class="fa fa-2x fa-fw fa-phone white" aria-hidden="true "></i>
               </a>
             </div>
@@ -140,8 +140,24 @@
     <p>¿Desea ver la ubicación en Google Maps?</p>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success btn-with-icon" (click)="goGoogleMaps(); c('')"><i class="fa fa-check" aria-hidden="true"></i> Aceptar</button>
-    <button type="button" class="btn btn-outline-dark btn-with-icon" (click)="c('Close click')"><i class="fa fa-times" aria-hidden="true"></i> Cancelar</button>
+    <button type="button" class="btn btn-default btn-with-icon" (click)="goGoogleMaps(); c('')"><p>Si</p></button>
+    <button type="button" class="btn btn-default" (click)="c('Close click')"> <p>No</p></button>
+  </div>
+</ng-template>
+
+<ng-template #callConfirmation let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Sugerencia</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>¿Desea llamar directamente?</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default btn-with-icon" (click)="goCall(); c('')"><p>Si</p></button>
+    <button type="button" class="btn btn-default" (click)="c('Close click')"> <p>No</p></button>
   </div>
 </ng-template>
 

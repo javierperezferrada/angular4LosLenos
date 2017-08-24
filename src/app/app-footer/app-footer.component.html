@@ -8,7 +8,7 @@
           <div class="row py-2">
             <div class="col-3">
               <a class="bg-circle bg-info" routerLink="ubicacion">
-                <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
+                <i class="fa fa-2x fa-fw fa-address-card white" aria-hidden="true "></i>
               </a>
             </div>
             <div class="col-9" routerLink="ubicacion">
@@ -25,8 +25,8 @@
           <!-- row start -->
           <div class="row py-2">
             <div class="col-3">
-              <a class="bg-circle bg-info" href="tel:632231003">
-                <i class="fa fa-2x fa-fw fa-phone" aria-hidden="true "></i>
+              <a class="bg-circle bg-info" (click)="open(callConfirmation)">
+                <i class="fa fa-2x fa-fw fa-phone white" aria-hidden="true "></i>
               </a>
             </div>
             <div class="col-9">
@@ -41,8 +41,8 @@
           <!-- row starting  -->
           <div class="row py-2">
             <div class="col-3">
-              <a class="bg-circle bg-info" href>
-                <i class="fa fa-2x fa-fw fa-map-marker" aria-hidden="true "></i>
+              <a class="bg-circle bg-info" (click)="open(content)">
+                <i class="fa fa-2x fa-fw fa-map-marker white" aria-hidden="true "></i>
               </a>
             </div>
             <div class="col-9">
@@ -61,7 +61,7 @@
   <div class="container-fluid bg-primary">
       <div class="row mt-1 mb-2">
         <div class="col-9 d-flex align-items-end">
-          <p class="text-white py-2">&copy; Los Leños 2017</p>
+          <p class="text-white py-2 small">&copy; Los Leños 2017</p>
         </div>
         <div class="col-3">
           <div class="d-inline-block float-right">
@@ -76,3 +76,35 @@
       </div>
   </div>
 </footer>
+
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Sugerencia</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>¿Desea ver la ubicación en Google Maps?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default btn-with-icon" (click)="goGoogleMaps(); c('')"><p>Si</p></button>
+      <button type="button" class="btn btn-default" (click)="c('Close click')"> <p>No</p></button>
+    </div>
+  </ng-template>
+
+  <ng-template #callConfirmation let-c="close" let-d="dismiss">
+    <div class="modal-header">
+      <h4 class="modal-title">Sugerencia</h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>¿Desea llamar directamente?</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default btn-with-icon" (click)="goCall(); c('')"><p>Si</p></button>
+      <button type="button" class="btn btn-default" (click)="c('Close click')"> <p>No</p></button>
+    </div>
+  </ng-template>
