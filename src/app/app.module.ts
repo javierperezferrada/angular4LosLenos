@@ -24,6 +24,9 @@ import { AgmCoreModule } from '@agm/core';
 import { FacebookModule } from 'ngx-facebook';
 import {Ng2Webstorage} from 'ng2-webstorage';
 import { LoadingModule } from 'ngx-loading';
+import { BaThemeSpinner } from "../services/baThemeSpinner.service";
+import { BaThemePreloader } from "../services/baThemePreloader.service";
+import { BaImageLoaderService } from "../services/baImageLoader.service";
 
 @NgModule({
   declarations: [
@@ -57,7 +60,8 @@ import { LoadingModule } from 'ngx-loading';
   entryComponents: [
     DetailModal
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, ContactService],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, ContactService,
+              BaThemeSpinner, BaThemePreloader, BaImageLoaderService],
   bootstrap: [AppComponent],
   exports: [GoTopButtonModule]
 })

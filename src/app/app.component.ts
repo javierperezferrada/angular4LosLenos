@@ -3,6 +3,9 @@ import { trigger, transition, style, animate } from '@angular/core';
 import { DOCUMENT } from "@angular/platform-browser";
 import {LocalStorageService, SessionStorageService} from 'ng2-webstorage';
 import { LoadingModule } from 'ngx-loading';
+import { BaThemeSpinner } from "../services/baThemeSpinner.service";
+import { BaImageLoaderService } from "../services/baImageLoader.service";
+import { BaThemePreloader } from "../services/baThemePreloader.service";
 
 @Component({
   selector: 'app-root',
@@ -41,7 +44,8 @@ export class AppComponent {
   public loading = false;
 
   constructor(@Inject(DOCUMENT) private document: Document,
-              private localSt:LocalStorageService) { }
+              private localSt:LocalStorageService, private _spinner: BaThemeSpinner,
+              private _imageLoader: BaImageLoaderService) { }
 
   ngOnInit () {
     this.localSt.observe('inHome')
@@ -70,5 +74,19 @@ export class AppComponent {
     if (this.innerWidth < 768) {
       this.buttonNavbar.nativeElement.click();
     }
+  }
+
+  public ngAfterViewInit(): void {
+    // hide spinner once all loaders are completed
+    BaThemePreloader.load().then((values) => {
+      this._spinner.hide();
+    });
+  }
+
+  private _loadImages(): void {
+    // register some loaders
+    BaThemePreloader.registerLoader(this._imageLoader.load('assets/img/slide-1.jpg'));
+    BaThemePreloader.registerLoader(this._imageLoader.load('assets/img/slide-2.jpg'));
+    BaThemePreloader.registerLoader(this._imageLoader.load('assets/img/slide-3.jpg'));
   }
 }
