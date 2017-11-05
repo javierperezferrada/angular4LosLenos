@@ -1,62 +1,55 @@
-
-
-
 <!-- Navigation -->
-<nav id="mainNav"
-        class="mt-1 mb-3 py-2 navbar navbar-toggleable-sm navbar-light bg-faded navbar navbar-default sticky-top navbar-custom"
-        *ngIf="navIsFixed"
-        [@enterAnimation]>
-        <div class="brand">Los Leños</div>
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll p-1 m-1">
-            <button class="navbar-toggler navbar-toggler-right"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                    #buttonNavbar>
+<nav id="mainNav" class="mt-1 mb-3 py-2 navbar navbar-toggleable-sm navbar-light bg-faded navbar navbar-default sticky-top navbar-custom"
+    *ngIf="navIsFixed" [@enterAnimation]>
+    <div class="brand">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-responsive" src="assets/img/logo-losleños.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll p-1 m-1">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation" #buttonNavbar>
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-            <a class="navbar-brand" routerLink="inicio">Los Leños</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav navbar-nav">
-                <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="inicio" (click)="closeNav()" aria-haspopup="true">Inicio</a>
-                </li>
-                <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="nosotros" (click)="closeNav()">Nosotros</a>
-                </li>
-                <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="productos" (click)="closeNav()">Productos</a>
-                </li>
-                <li [routerLinkActive]="['active']" class="nav-item">
-                    <a  class="nav-link" routerLink="ubicacion" (click)="closeNav()">Ubicación</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-   
-</nav>
-    
+        <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+        <a class="navbar-brand" routerLink="inicio">Los Leños</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav">
+            <li [routerLinkActive]="['active']" class="nav-item">
+                <a class="nav-link" routerLink="inicio" (click)="closeNav()" aria-haspopup="true">Inicio</a>
+            </li>
+            <li [routerLinkActive]="['active']" class="nav-item">
+                <a class="nav-link" routerLink="nosotros" (click)="closeNav()">Nosotros</a>
+            </li>
+            <li [routerLinkActive]="['active']" class="nav-item">
+                <a class="nav-link" routerLink="productos" (click)="closeNav()">Productos</a>
+            </li>
+            <li [routerLinkActive]="['active']" class="nav-item">
+                <a class="nav-link" routerLink="ubicacion" (click)="closeNav()">Ubicación</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
 
-  <router-outlet></router-outlet>
+</nav>
+
+
+<router-outlet></router-outlet>
 
 <!-- /.container -->
 
 <!-- Footer -->
 
-    <app-app-footer></app-app-footer>
+<app-app-footer></app-app-footer>
 
 <!-- jQuery -->
 <script src="assets/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="assets/js/bootstrap.min.js"></script>
-
-
-
